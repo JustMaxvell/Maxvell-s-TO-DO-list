@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+p, a, h3 {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../img/background.jpeg') repeat-y 50% top / 100% auto;
+}
+
+.toDoForm {
+  margin-top: 40px;
+  width: 40%;
+  min-width: 320px;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid skyblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.title, .description, .addButton {
+  margin: 10px 0 10px 0;
+}
+
+.title, .description {
+  width: 100%;
+  max-width: 100%;
+}
+
+.description {
+  height: 70px;
+  resize: none;
+}
+
+.buttonForAdd {
+  width: 40%;
+  min-width: 150px;
+  padding: 10px 0;
+  background:rgb(135, 206, 235);
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.buttonForAdd:hover {
+  border-color: rgb(42, 157, 202);
+  background: rgb(42, 157, 202);
+}
+
+.searchField {
+  align-self: flex-start;
+}
+
+.workSpace {
+  margin: 20px 0;
+  border-radius: 5px;
+  background: #fff;
+  width: 40%;
+  min-width: 320px;
+  background:#fff;
+  overflow: scroll;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  user-select: none;
+  border: 2px solid transparent;
+  border-bottom: 1px solid rgba(135, 206, 235, 0.5);
+  margin-bottom: -2px;
+}
+
+.wrapper.approved {
+  border: 2px solid #22d12a;
+}
+
+.wrapper.approved:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper.approved:last-child {
+  margin:0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.wrapper.approved:only-child{
+  border: 2px solid #22d12a;
+}
+
+
+.wrapper h3 {
+  color: skyblue;
+}
+
+.functions {
+  width: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 10px;
+  height: 7px;
+  border-left: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  transform: rotate(-45deg);
+  cursor: pointer;
+} 
+
+.checkbox:hover {
+  border-color: #22d12a;
+}
+
+.deleteButton {
+  position: relative;
+  right: 0;
+  border: none;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.deleteButton span{
+  position: absolute;
+  top: 7px;
+  width: 10px;
+  height: 2px;
+  background: lightgray;
+  transform: rotate(45deg);
+}
+
+.deleteButton span+span{
+  transform: rotate(135deg);
+}
+
+.deleteButton_hover:hover span{
+  background: rgb(225, 0, 0);
+}
+
+.result {
+  width: 40%;
+  min-width: 320px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.3);
+  padding: 5px 10px 5px 0;
+}
+
+.status, .clearData {
+  padding: 5px 10px;
+  color: skyblue;
+  cursor: pointer;
+  user-select: none;
+}
+
+.counterOfComplited {
+  color: skyblue;
+  margin-left: 10px;
+}
+
+.focusedStatus {
+  background: rgba(255,255,255,0.5);
+}
+
+.clearData{
+  margin-left: 30px;
+}
+
+.clearData:hover {
+  color:rgb(225, 0, 0);
+  background: rgba(255,255,255,0.5);
+}
+
+.hide {
+  display: none;
+}
+
+.notApproved {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 940px) {
+  .result {
+    display: block;
+  }
+
+  .counterOfComplited {
+    margin-top: 10px;
+  }
+
+}
